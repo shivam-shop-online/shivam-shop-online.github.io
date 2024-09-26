@@ -5,6 +5,15 @@ const Documentation = () => {
   const instructions = `
 # Documentation
 
+## 0. Creating GitHub repository:
+
+- Fork the respository at https://github.com/s-agarwl/easyAcademicPortfolio
+- Name of your repository should be "yourGitHubUsername.github.io".
+- Navigate to "Actions". Click "I understand my workflows, go ahead and enable them".
+- Under "Source", select "GitHub Actions" from the dropdown menu.
+- Go to "Settings". From the left sidebar, navigate to "Pages". Under "Build and deployment", select "gh-pages" from the dropdown menu. Click "Save".
+
+
 ## 1. Customizing Your Website with config.json
 
 The \`config.json\` file is where you personalize your website. Here's a detailed guide:
