@@ -5,16 +5,25 @@ const Documentation = () => {
   const instructions = `
 # Documentation
 
-## 0. Creating GitHub repository:
+## 0. Creating and Deploying your GitHub repository:
 
 - Fork the respository at https://github.com/s-agarwl/easyAcademicPortfolio
-- Name of your repository should be "yourGitHubUsername.github.io".
-- Navigate to "Actions". Click "I understand my workflows, go ahead and enable them".
-- Under "Source", select "GitHub Actions" from the dropdown menu.
-- Go to "Settings". From the left sidebar, navigate to "Pages". Under "Build and deployment", select "gh-pages" from the dropdown menu. Click "Save".
+- Name of your repository should be "yourGitHubUsername.github.io". Uncheck "include only main branch". Ensure that the repository is public.
+- Navigate to "Actions" on top/left sidebar. Click "I understand my workflows, go ahead and enable them".
+- Go to "Settings". From the left sidebar, navigate to "Pages". Under "Build and deployment", select source as "gh-pages" from the dropdown menu. Click "Save".
+- Wait for a minute. your website should be now visible at yourGitHubUsername.github.io
+
+## 1. Workflow:
+
+I see following three workflows:
+
+1. If you are not a coder, then you can edit and add the files in the \`dist\` folder through the GitHub website, as intructed below. 
+2. If you know how to work with GitHub repositories but not adept at compiling code using \`npm\`, then you can clone the respository on your local machine. 
+Just focus on the contents inside \`dist\` and edit the files as instructed below. you would then need to push the changes to your repository and GitHub actions will do the rest.
+3. If you are a coder, then you can clone the respository on your local machine, make the changes in the source code, implement your own functionalities, and push the changes to the GitHubrepository.
 
 
-## 1. Customizing Your Website with config.json
+## 2. Customizing Your Website with config.json
 
 The \`config.json\` file is where you personalize your website. Here's a detailed guide:
 
@@ -151,7 +160,7 @@ The \`specialSections\` object defines additional pages:
 ### Section Order
 The \`orderOfSectionsInHeader\` array determines the order of sections in the navigation menu.
 
-## 2. Adding New Publications
+## 3. Adding New Publications
 
 1. Open your BibTeX file (specified in \`bibtexPath\`).
 2. Add a new entry using this format:
@@ -193,7 +202,7 @@ The \`orderOfSectionsInHeader\` array determines the order of sections in the na
 
 After uploading, refresh your website to see the changes. No rebuild is needed for new publications.
 
-## 3. Adding Markdown Content to Publications
+## 4. Adding Markdown Content to Publications
 
 To add detailed Markdown content to a publication:
 
@@ -202,7 +211,7 @@ To add detailed Markdown content to a publication:
 3. Add a \`markdown\` field to your BibTeX entry, pointing to this file:
 4. The content of this Markdown file will now appear on the publication's detail page.
 
-## 4. Troubleshooting
+## 5. Troubleshooting
 
 If changes don't appear:
 1. Clear your browser cache and reload.
@@ -212,26 +221,13 @@ If changes don't appear:
 
 For the richest publication pages, include as much information as possible in your BibTeX entries and utilize the Markdown feature for detailed content.
 
-## 5. Easy Deployment with GitHub Pages
+## 6. Easy Deployment with GitHub Pages
 
-To make it easy to deploy your website after making changes to \`config.json\` or adding new publications, follow these steps:
+Your website should already be up an drunning on the url yourGitHubUsername.github.io. Whenever you make changes (through either of the three workflows mentioned in point 1 above), you would need to push the changes to the GitHub repository. 
+The deployment will be handled by GitHub build pipeline and the website will be updated in 1-2 minutes. You may want to refresh or clear your browser cache if the changes are not visible. 
+(Tip: Opening the website in incognito might be a quick way to see the changes or opening the developer console in browser might help to refresh cache.)
 
-### Initial Setup (one-time process)
-
-1. Fork this repository to your GitHub account.
-2. Go to your forked repository's settings.
-3. Navigate to "Pages" under "Code and automation" in the left sidebar.
-4. Under "Source", select "GitHub Actions" from the dropdown menu.
-
-The deployment workflow file (\`.github/workflows/deploy.yml\`) is already included in the repository, so you don't need to create it manually.
-
-### Verifying Build Directory
-
-The workflow is configured to use \`./dist\` as the publish directory. If your project uses a different build output directory:
-
-### Deploying Changes
-
-After the initial setup, deploying changes is simple:
+Remember:
 
 1. Make your desired changes to \`config.json\` or add new publications to your BibTeX file.
 2. Commit and push these changes to the \`main\` branch of your GitHub repository.
@@ -247,8 +243,6 @@ This process allows you to update your website directly through GitHub's web int
 5. Click "Commit changes".
 
 Your website will automatically update with the new changes.
-
-Note: The first time you push changes, it may take a few minutes for GitHub Pages to set up. Subsequent updates should be quicker.
 
 If you encounter any issues or your changes don't appear after a few minutes, check the "Actions" tab in your GitHub repository for any error messages.
 
