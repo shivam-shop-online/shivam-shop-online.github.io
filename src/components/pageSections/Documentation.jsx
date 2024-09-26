@@ -3,7 +3,11 @@ import ReactMarkdown from 'react-markdown';
 
 const Documentation = () => {
   const instructions = `
-# Documentation
+# Easily create and host your academic website on GitHub Pages
+
+I have created this repository to help PhD students and postdocs to host their academic websites on GitHub Pages. I wanted creating, hosting, and updating the website (e.g., new publications) to be as easy as possible. You dont need to be a web developer to make changes. You just need to make changes to a \`json\` file to enter your information (e.g., name) and add publication in a \`bib\` file. YOU DONT NEED TO COMPILE THE CODE. I PROMISE!
+
+See an example of a website created using this repository at https://s-agarwal.github.io/
 
 ## 0. Creating and Deploying your GitHub repository:
 
@@ -17,17 +21,17 @@ const Documentation = () => {
 
 I see following three workflows:
 
-1. If you are not a coder, then you can edit and add the files in the \`dist\` folder through the GitHub website, as intructed below. 
-2. If you know how to work with GitHub repositories but not adept at compiling code using \`npm\`, then you can clone the respository on your local machine. 
-Just focus on the contents inside \`dist\` and edit the files as instructed below. you would then need to push the changes to your repository and GitHub actions will do the rest.
+1. If you are not a coder, then you can edit and add the files in the \`dist\` folder through the GitHub website, as intructed below.
+2. If you know how to work with GitHub repositories but not adept at compiling code using \`npm\`, then you can clone the respository on your local machine.
+   Just focus on the contents inside \`dist\` and edit the files as instructed below. you would then need to push the changes to your repository and GitHub actions will do the rest.
 3. If you are a coder, then you can clone the respository on your local machine, make the changes in the source code, implement your own functionalities, and push the changes to the GitHubrepository.
-
 
 ## 2. Customizing Your Website with config.json
 
 The \`config.json\` file is where you personalize your website. Here's a detailed guide:
 
 ### Basic Information
+
 - \`researcherName\`: Your full name (string)
 - \`institution\`: Where you work or study (string)
 - \`email\`: Your contact email (string)
@@ -36,128 +40,140 @@ The \`config.json\` file is where you personalize your website. Here's a detaile
 - \`profilePhotoPath\`: Path to your profile picture (string, e.g., "/profile-photo.png")
 
 ### Social and Professional Links
+
 The \`links\` object contains various platform links. Each key is a platform name, and the value is the URL or an empty string if not used. Available platforms include:
 \`\`\`
-googleScholar, linkedin, github, orcid, researchGate, academiaEdu, webOfScience, 
-scopus, dblp, universityProfile, twitter, publons, arxiv, semanticScholar, 
+googleScholar, linkedin, github, orcid, researchGate, academiaEdu, webOfScience,
+scopus, dblp, universityProfile, twitter, publons, arxiv, semanticScholar,
 microsoftAcademic, youTube, slideshare, figshare, mendeley, zotero, impactStory
 \`\`\`
 
 ### Website Sections
+
 The \`sections\` object defines the main content areas of your website:
 
 #### About Section
+
 \`\`\`json
 "about": {
-  "id": "About",
-  "headerText": "About Me",
-  "subHeading": "Your title or role",
-  "content": "Your bio in HTML format"
+"id": "About",
+"headerText": "About Me",
+"subHeading": "Your title or role",
+"content": "Your bio in HTML format"
 }
 \`\`\`
 
 #### Education Section
+
 \`\`\`json
 "education": {
-  "id": "Education",
-  "headerText": "Education",
-  "sectionHeading": "Educational Background",
-  "content": [
-    {
-      "degree": "Degree name",
-      "honors": "Honors (optional)",
-      "institution": "Institution name",
-      "location": "Location",
-      "period": "Start date – End date"
-    },
-    // ... more education entries
-  ]
+"id": "Education",
+"headerText": "Education",
+"sectionHeading": "Educational Background",
+"content": [
+{
+"degree": "Degree name",
+"honors": "Honors (optional)",
+"institution": "Institution name",
+"location": "Location",
+"period": "Start date – End date"
+},
+// ... more education entries
+]
 }
 \`\`\`
 
 #### Work Experience Section
+
 \`\`\`json
 "workExperience": {
-  "id": "WorkExperience",
-  "headerText": "Work Experience",
-  "sectionHeading": "Professional Journey",
-  "content": [
-    {
-      "title": "Job title",
-      "company": "Company name",
-      "location": "Location",
-      "period": "Start date – End date",
-      "description": "Job description"
-    },
-    // ... more work experience entries
-  ]
+"id": "WorkExperience",
+"headerText": "Work Experience",
+"sectionHeading": "Professional Journey",
+"content": [
+{
+"title": "Job title",
+"company": "Company name",
+"location": "Location",
+"period": "Start date – End date",
+"description": "Job description"
+},
+// ... more work experience entries
+]
 }
 \`\`\`
 
 #### Awards Section
+
 \`\`\`json
 "awards": {
-  "id": "Awards",
-  "headerText": "Awards",
-  "sectionHeading": "Honors and Achievements",
-  "content": [
-    {
-      "title": "Award name",
-      "description": "Award description",
-      "icon": "Icon name (e.g., FaTrophy, FaMedal)",
-      "details": "Link to more details (optional)"
-    },
-    // ... more award entries
-  ]
+"id": "Awards",
+"headerText": "Awards",
+"sectionHeading": "Honors and Achievements",
+"content": [
+{
+"title": "Award name",
+"description": "Award description",
+"icon": "Icon name (e.g., FaTrophy, FaMedal)",
+"details": "Link to more details (optional)"
+},
+// ... more award entries
+]
 }
 \`\`\`
 
 #### Featured Publications Section
+
 \`\`\`json
 "featuredPublications": {
-  "id": "FeaturedPublications",
-  "headerText": "Featured",
-  "sectionHeading": "Featured Research",
-  "content": ["CitationKey1", "CitationKey2", "CitationKey3"]
+"id": "FeaturedPublications",
+"headerText": "Featured",
+"sectionHeading": "Featured Research",
+"content": ["CitationKey1", "CitationKey2", "CitationKey3"]
 }
 \`\`\`
 
 #### Contact Section
+
 \`\`\`json
 "contact": {
-  "id": "Contact",
-  "headerText": "Contact",
-  "sectionHeading": "Get in Touch",
-  "content": {
-    "intro": "Introduction text",
-    "linksToDisplay": ["linkedin", "email"],
-    "outro": "Closing text"
-  }
+"id": "Contact",
+"headerText": "Contact",
+"sectionHeading": "Get in Touch",
+"content": {
+"intro": "Introduction text",
+"linksToDisplay": ["linkedin", "email"],
+"outro": "Closing text"
+}
 }
 \`\`\`
 
 #### Custom Section
+
 You can add custom sections to your landing page using the following structure:
 
 \`\`\`json
 "customSection": {
-  "id": "CustomSection",
-  "headerText": "Custom Section",
-  "sectionHeading": "My Custom Section",
-  "type": "dynamic",
-  "content": "<p className='mb-4'>This is a custom section. You can add any HTML content here.</p>"
+"id": "CustomSection",
+"headerText": "Custom Section",
+"sectionHeading": "My Custom Section",
+"type": "dynamic",
+"content": "<p className='mb-4'>This is a custom section. You can add any HTML content here.</p>"
 }
 \`\`\`
 
 Add this to the \`sections\` object in \`config.json\` and include the section's \`id\` in the \`orderOfSectionsInHeader\` array to display it on your landing page.
 
 ### Special Sections
+
 The \`specialSections\` object defines additional pages:
+
 - \`allPublications\`: Displays all your publications
 - \`phdThesis\`: Links to your PhD thesis
 - \`documentation\`: This help page
 
 ### Section Order
+
 The \`orderOfSectionsInHeader\` array determines the order of sections in the navigation menu.
 
 ## 3. Adding New Publications
@@ -167,30 +183,31 @@ The \`orderOfSectionsInHeader\` array determines the order of sections in the na
 
    \`\`\`bibtex
    @article{PublicationId,
-     author = {Author, A. and Author, B.},
-     title = {Title of the Article},
-     journal = {Journal Name},
-     year = {2023},
-     volume = {1},
-     number = {1},
-     pages = {1--10},
-     doi = {10.1000/xyz123},
-     abstract = {Brief summary of the paper.},
-     url = {https://doi.org/10.1000/xyz123},
-     image = {image.jpg},
-     paperurl = {paper.pdf},
-     code = {https://github.com/yourusername/project},
-     video = {https://youtube.com/watch?v=videoID},
-     slides = {slides.pdf},
-     github = {https://github.com/yourusername/project},
-     demo = {https://demo-url.com},
-     awards = {Best Paper Award},
-     shorturl = {short-url-for-paper},
-     markdown = {markdown-file.md}
+   author = {Author, A. and Author, B.},
+   title = {Title of the Article},
+   journal = {Journal Name},
+   year = {2023},
+   volume = {1},
+   number = {1},
+   pages = {1--10},
+   doi = {10.1000/xyz123},
+   abstract = {Brief summary of the paper.},
+   url = {https://doi.org/10.1000/xyz123},
+   image = {image.jpg},
+   paperurl = {paper.pdf},
+   code = {https://github.com/yourusername/project},
+   video = {https://youtube.com/watch?v=videoID},
+   slides = {slides.pdf},
+   github = {https://github.com/yourusername/project},
+   demo = {https://demo-url.com},
+   awards = {Best Paper Award},
+   shorturl = {short-url-for-paper},
+   markdown = {markdown-file.md}
    }
    \`\`\`
 
-   Note: 
+   Note:
+
    - All fields after \`abstract\` are optional. Include them only if relevant to your publication.
    - \`image\`, \`paperurl\`, and \`slides\` paths should mention just the file name in folder of the respective publication \`public/publications/PublicationId/\`.
    - The \`markdown\` field, if provided, the content of this Markdown file will be included in the publication details page.
@@ -214,6 +231,7 @@ To add detailed Markdown content to a publication:
 ## 5. Troubleshooting
 
 If changes don't appear:
+
 1. Clear your browser cache and reload.
 2. Verify all files are uploaded to the correct locations.
 3. Check file paths in BibTeX entries.
@@ -223,8 +241,8 @@ For the richest publication pages, include as much information as possible in yo
 
 ## 6. Easy Deployment with GitHub Pages
 
-Your website should already be up an drunning on the url yourGitHubUsername.github.io. Whenever you make changes (through either of the three workflows mentioned in point 1 above), you would need to push the changes to the GitHub repository. 
-The deployment will be handled by GitHub build pipeline and the website will be updated in 1-2 minutes. You may want to refresh or clear your browser cache if the changes are not visible. 
+Your website should already be up an drunning on the url yourGitHubUsername.github.io. Whenever you make changes (through either of the three workflows mentioned in point 1 above), you would need to push the changes to the GitHub repository.
+The deployment will be handled by GitHub build pipeline and the website will be updated in 1-2 minutes. You may want to refresh or clear your browser cache if the changes are not visible.
 (Tip: Opening the website in incognito might be a quick way to see the changes or opening the developer console in browser might help to refresh cache.)
 
 Remember:
@@ -245,6 +263,7 @@ This process allows you to update your website directly through GitHub's web int
 Your website will automatically update with the new changes.
 
 If you encounter any issues or your changes don't appear after a few minutes, check the "Actions" tab in your GitHub repository for any error messages.
+
 
 `;
 
