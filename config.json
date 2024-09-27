@@ -1,5 +1,5 @@
 {
-  "researcherName": "FirstName LastName",
+  "researcherName": "John Doe",
   "institution": "{Institution Name}",
   "email": "{email@example.com}",
   "theme": "light",
@@ -28,6 +28,16 @@
   },
   "bibtexPath": "/pubs.bib",
   "profilePhotoPath": "/profile-photo.png",
+  "sectionsToShowInThisOrder": [
+    "About",
+    "Education",
+    "WorkExperience",
+    "Awards",
+    "FeaturedPublications",
+    "Contact",
+    "AllPublications",
+    "Documentation"
+  ],
   "sections": {
     "about": {
       "id": "About",
@@ -148,14 +158,7 @@
       }
     }
   },
-  "orderOfSectionsInHeader": [
-    "About",
-    "Education",
-    "WorkExperience",
-    "Awards",
-    "FeaturedPublications",
-    "Contact"
-  ],
+
   "specialSections": {
     "allPublications": {
       "id": "AllPublications",
