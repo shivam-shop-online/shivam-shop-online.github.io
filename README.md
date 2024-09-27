@@ -1,6 +1,6 @@
 # Easily create and host your academic website on GitHub Pages
 
-I have created this repository to help PhD students and postdocs to host their academic websites on GitHub Pages. I wanted creating, hosting, and updating the website (e.g., new publications) to be as easy as possible. You dont need to be a web developer to make changes. You just need to make changes to a \`json\` file to enter your information (e.g., name) and add publication in a \`bib\` file. YOU DONT NEED TO COMPILE THE CODE. I PROMISE!
+I have created this repository to help anyone create and host their website on GitHub Pages. I wanted creating, hosting, and updating the website (e.g., new publications) to be as easy as possible. You dont need to be a web developer to make changes. You just need to make changes to a `json` file to enter your information (e.g., name) and add publication in a `bib` file. YOU DONT NEED TO COMPILE THE CODE. I PROMISE!
 
 See an example of a website created using this repository at https://s-agarwl.github.io/
 
@@ -16,51 +16,50 @@ See an example of a website created using this repository at https://s-agarwl.gi
 
 I see following three workflows:
 
-1. If you are not a coder, then you can edit and add the files in the \`dist\` folder through the GitHub website, as intructed below.
-2. If you know how to work with GitHub repositories but not adept at compiling code using \`npm\`, then you can clone the respository on your local machine.
-   Just focus on the contents inside \`dist\` and edit the files as instructed below. you would then need to push the changes to your repository and GitHub actions will do the rest.
-3. If you are a coder, then you can clone the respository on your local machine, make the changes in the source code, implement your own functionalities, and push the changes to the GitHubrepository.
+1. If you are not a coder, then you can edit and add the files in the `public` folder through the GitHub website, as intructed below.
+2. If you know how to work with GitHub repositories but not adept at compiling code using `npm`, then you can clone the respository on your local machine.Just focus on the contents inside `public` and edit the files as instructed below. you would then need to push the changes to your repository and GitHub actions will do the rest.
+3. If you are a coder, then you can clone the respository on your local machine, make the changes in the source code, implement your own functionalities, and push the changes to the GitHub repository.
 
-## 2. Customizing Your Website with config.json
+## 2. Customizing Your website with config.json
 
-The \`config.json\` file is where you personalize your website. Here's a detailed guide:
+The `config.json` file is where you personalize your website. Here's a detailed guide:
 
 ### Basic Information
 
-- \`researcherName\`: Your full name (string)
-- \`institution\`: Where you work or study (string)
-- \`email\`: Your contact email (string)
-- \`theme\`: Website color scheme (string: "light" or "dark")
-- \`bibtexPath\`: Path to your BibTeX file (string, e.g., "/pubs.bib")
-- \`profilePhotoPath\`: Path to your profile picture (string, e.g., "/profile-photo.png")
+- `researcherName`: Your full name (string)
+- `institution`: Where you work or study (string)
+- `email`: Your contact email (string)
+- `theme`: Website color scheme (string: "light" or "dark")
+- `bibtexPath`: Path to your BibTeX file (string, e.g., "/pubs.bib")
+- `profilePhotoPath`: Path to your profile picture (string, e.g., "/profile-photo.png")
 
 ### Social and Professional Links
 
-The \`links\` object contains various platform links. Each key is a platform name, and the value is the URL or an empty string if not used. Available platforms include:
-\`\`\`
+The `links` object contains various platform links. Each key is a platform name, and the value is the URL or an empty string if not used. Available platforms include:
+```
 googleScholar, linkedin, github, orcid, researchGate, academiaEdu, webOfScience,
 scopus, dblp, universityProfile, twitter, publons, arxiv, semanticScholar,
 microsoftAcademic, youTube, slideshare, figshare, mendeley, zotero, impactStory
-\`\`\`
+```
 
 ### Website Sections
 
-The \`sections\` object defines the main content areas of your website:
+The `sections` object defines the main content areas of your website:
 
 #### About Section
 
-\`\`\`json
+```json
 "about": {
 "id": "About",
 "headerText": "About Me",
 "subHeading": "Your title or role",
 "content": "Your bio in HTML format"
 }
-\`\`\`
+```
 
 #### Education Section
 
-\`\`\`json
+```json
 "education": {
 "id": "Education",
 "headerText": "Education",
@@ -76,11 +75,11 @@ The \`sections\` object defines the main content areas of your website:
 // ... more education entries
 ]
 }
-\`\`\`
+```
 
 #### Work Experience Section
 
-\`\`\`json
+```json
 "workExperience": {
 "id": "WorkExperience",
 "headerText": "Work Experience",
@@ -96,11 +95,11 @@ The \`sections\` object defines the main content areas of your website:
 // ... more work experience entries
 ]
 }
-\`\`\`
+```
 
 #### Awards Section
 
-\`\`\`json
+```json
 "awards": {
 "id": "Awards",
 "headerText": "Awards",
@@ -115,22 +114,22 @@ The \`sections\` object defines the main content areas of your website:
 // ... more award entries
 ]
 }
-\`\`\`
+```
 
 #### Featured Publications Section
 
-\`\`\`json
+```json
 "featuredPublications": {
 "id": "FeaturedPublications",
 "headerText": "Featured",
 "sectionHeading": "Featured Research",
 "content": ["CitationKey1", "CitationKey2", "CitationKey3"]
 }
-\`\`\`
+```
 
 #### Contact Section
 
-\`\`\`json
+```json
 "contact": {
 "id": "Contact",
 "headerText": "Contact",
@@ -141,42 +140,42 @@ The \`sections\` object defines the main content areas of your website:
 "outro": "Closing text"
 }
 }
-\`\`\`
+```
 
 #### Custom Section
 
 You can add custom sections to your landing page using the following structure:
 
-\`\`\`json
-"customSection": {
-"id": "CustomSection",
-"headerText": "Custom Section",
-"sectionHeading": "My Custom Section",
+```json
+"customSection1": {
+"id": "CustomSection1",
+"headerText": "Custom Section 1",
+"sectionHeading": "My Custom Section 1",
 "type": "dynamic",
 "content": "<p className='mb-4'>This is a custom section. You can add any HTML content here.</p>"
 }
-\`\`\`
+```
 
-Add this to the \`sections\` object in \`config.json\` and include the section's \`id\` in the \`orderOfSectionsInHeader\` array to display it on your landing page.
+Add this to the `sections` object in `config.json` and include the section's `id` in the `orderOfSectionsInHeader` array to display it on your landing page.
 
 ### Special Sections
 
-The \`specialSections\` object defines additional pages:
+The `specialSections` object defines additional pages:
 
-- \`allPublications\`: Displays all your publications
-- \`phdThesis\`: Links to your PhD thesis
-- \`documentation\`: This help page
+- `allPublications`: Displays all your publications
+- `phdThesis`: Links to your PhD thesis
+- `documentation`: This help page
 
 ### Section Order
 
-The \`orderOfSectionsInHeader\` array determines the order of sections in the navigation menu.
+The `orderOfSectionsInHeader` array determines the order of sections in the navigation menu.
 
 ## 3. Adding New Publications
 
-1. Open your BibTeX file (specified in \`bibtexPath\`).
+1. Open your BibTeX file (specified in `bibtexPath`).
 2. Add a new entry using this format:
 
-   \`\`\`bibtex
+   ```bibtex
    @article{PublicationId,
    author = {Author, A. and Author, B.},
    title = {Title of the Article},
@@ -199,17 +198,17 @@ The \`orderOfSectionsInHeader\` array determines the order of sections in the na
    shorturl = {short-url-for-paper},
    markdown = {markdown-file.md}
    }
-   \`\`\`
+   ```
 
    Note:
 
-   - All fields after \`abstract\` are optional. Include them only if relevant to your publication.
-   - \`image\`, \`paperurl\`, and \`slides\` paths should mention just the file name in folder of the respective publication \`public/publications/PublicationId/\`.
-   - The \`markdown\` field, if provided, the content of this Markdown file will be included in the publication details page.
+   - All fields after `abstract` are optional. Include them only if relevant to your publication.
+   - `image`, `paperurl`, and `slides` paths should mention just the file name in folder of the respective publication `public/publications/PublicationId/`.
+   - The `markdown` field, if provided, the content of this Markdown file will be included in the publication details page.
 
 3. Save the BibTeX file.
-4. To feature this publication, add its citation key to \`featuredPublications\` in \`config.json\`.
-5. Place any associated files (PDF, images) in \`public/publications/PublicationId/\`.
+4. To feature this publication, add its citation key to `featuredPublications` in `config.json`.
+5. Place any associated files (PDF, images) in `public/publications/PublicationId/`.
 6. Upload all modified files to your web server.
 
 After uploading, refresh your website to see the changes. No rebuild is needed for new publications.
@@ -218,9 +217,9 @@ After uploading, refresh your website to see the changes. No rebuild is needed f
 
 To add detailed Markdown content to a publication:
 
-1. Create a Markdown file for your publication (e.g., \`publicationDetails.md\`).
-2. Place this file in the same directory as other publication files (\`public/publications/PublicationId/\`).
-3. Add a \`markdown\` field to your BibTeX entry, pointing to this file:
+1. Create a Markdown file for your publication (e.g., `publicationDetails.md`).
+2. Place this file in the same directory as other publication files (`public/publications/PublicationId/`).
+3. Add a `markdown` field to your BibTeX entry, pointing to this file:
 4. The content of this Markdown file will now appear on the publication's detail page.
 
 ## 5. Troubleshooting
@@ -242,14 +241,14 @@ The deployment will be handled by GitHub build pipeline and the website will be 
 
 Remember:
 
-1. Make your desired changes to \`config.json\` or add new publications to your BibTeX file.
-2. Commit and push these changes to the \`main\` branch of your GitHub repository.
+1. Make your desired changes to `config.json` or add new publications to your BibTeX file.
+2. Commit and push these changes to the `main` branch of your GitHub repository.
 3. GitHub Actions will automatically build and deploy your website.
 4. Wait a few minutes, then visit your GitHub Pages URL to see the changes live.
 
 This process allows you to update your website directly through GitHub's web interface:
 
-1. Navigate to your \`config.json\` file in your GitHub repository.
+1. Navigate to your `config.json` file in your GitHub repository.
 2. Click the edit (pencil) icon.
 3. Make your changes.
 4. At the bottom of the page, add a commit message describing your changes.

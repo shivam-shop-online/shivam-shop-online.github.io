@@ -28,6 +28,16 @@
   },
   "bibtexPath": "/pubs.bib",
   "profilePhotoPath": "/profile-photo.png",
+  "sectionsToShowInThisOrder": [
+    "About",
+    "Education",
+    "WorkExperience",
+    "Awards",
+    "FeaturedPublications",
+    "Contact",
+    "AllPublications",
+    "Documentation"
+  ],
   "sections": {
     "about": {
       "id": "About",
@@ -148,16 +158,7 @@
       }
     }
   },
-  "orderOfSectionsInHeader": [
-    "About",
-    "Education",
-    "WorkExperience",
-    "Awards",
-    "FeaturedPublications",
-    "Contact",
-    "AllPublications",
-    "Documentation"
-  ],
+
   "specialSections": {
     "allPublications": {
       "id": "AllPublications",
