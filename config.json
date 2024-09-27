@@ -1,5 +1,5 @@
 {
-  "researcherName": "John Doe",
+  "researcherName": "FirstName LastName",
   "institution": "{Institution Name}",
   "email": "{email@example.com}",
   "theme": "light",
@@ -154,9 +154,7 @@
     "WorkExperience",
     "Awards",
     "FeaturedPublications",
-    "Contact",
-    "AllPublications",
-    "Documentation"
+    "Contact"
   ],
   "specialSections": {
     "allPublications": {
