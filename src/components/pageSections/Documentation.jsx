@@ -5,10 +5,10 @@ const Documentation = () => {
   const [instructions, setInstructions] = useState('');
 
   useEffect(() => {
-    fetch('/README.md')
-      .then(response => response.text())
-      .then(text => setInstructions(text))
-      .catch(error => console.error('Error fetching README.md:', error));
+    fetch('/docs.md')
+      .then((response) => response.text())
+      .then((text) => setInstructions(text))
+      .catch((error) => console.error('Error fetching README.md:', error));
   }, []);
 
   return (
