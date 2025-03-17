@@ -1,5 +1,5 @@
 {
-  "researcherName": "John Doe",
+  "researcherName": "Test",
   "institution": "{Institution Name}",
   "email": "{email@example.com}",
   "theme": "light",
@@ -153,12 +153,14 @@
       "sectionHeading": "Get in Touch",
       "content": {
         "intro": "{Introduction text}",
-        "linksToDisplay": ["linkedin", "email"],
+        "linksToDisplay": [
+          "linkedin",
+          "email"
+        ],
         "outro": "{Outro text}"
       }
     }
   },
-
   "specialSections": {
     "allPublications": {
       "id": "AllPublications",
