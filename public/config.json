@@ -1,5 +1,5 @@
 {
-  "researcherName": "S Agarwal",
+  "researcherName": "Testing 123",
   "institution": "{Institution Name}",
   "email": "{email@example.com}",
   "theme": "light",
@@ -43,7 +43,7 @@
       "id": "About",
       "headerText": "About Me",
       "subHeading": "{Job Title}",
-      "content": "<p className='mb-4'>Hi, I'm {First Name}.<p>{A short bio. You can use html tags in the content string}</p></p>"
+      "content": "this is test message"
     },
     "education": {
       "id": "Education",
