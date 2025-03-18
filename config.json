@@ -159,6 +159,11 @@
         ],
         "outro": "{Outro text}"
       }
+    },
+    "test": {
+      "id": "test",
+      "headerText": "test",
+      "content": "Your content here. You can edit this in the form or JSON view."
     }
   },
   "specialSections": {
