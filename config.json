@@ -1,5 +1,5 @@
 {
-  "researcherName": "My name",
+  "researcherName": "test name",
   "institution": "",
   "email": "{email@example.com}",
   "theme": "light",
@@ -42,35 +42,23 @@
   ],
   "sections": {
     "about": {
+      "key": "about",
       "id": "About",
       "headerText": "About Me",
-      "subHeading": "{Job Title}",
-      "content": "this is test message"
+      "subHeading": "Astronaut",
+      "content": "Apollo 13 project leader"
     },
     "education": {
+      "key": "education",
       "id": "Education",
       "headerText": "Education",
       "sectionHeading": "Educational Background",
       "content": [
         {
-          "degree": "{Degree Name}",
-          "honors": "{Honors}",
-          "institution": "{Institution Name}",
-          "location": "{Country}",
-          "period": "{Start Date} – {End Date}"
-        },
-        {
-          "degree": "{Degree Name}",
-          "honors": "{Honors}",
-          "institution": "{Institution Name}",
-          "location": "{Country}",
-          "period": "{Start Date} – {End Date}"
-        },
-        {
-          "degree": "{Degree Name}",
-          "honors": "{Honors}",
-          "institution": "{Institution Name}",
-          "location": "{Country}",
+          "degree": "btake",
+          "honors": "awesome",
+          "institution": "faltu",
+          "location": "earth",
           "period": "{Start Date} – {End Date}"
         }
       ]
@@ -161,6 +149,20 @@
         ],
         "outro": "{Outro text}"
       }
+    },
+    "featuredpublications": {
+      "key": "featuredPublications",
+      "id": "FeaturedPublications",
+      "headerText": "Featured",
+      "sectionHeading": "Featured Research",
+      "content": [
+        "Doe2020AIAnalysis",
+        "Doe2020DataStreams",
+        "Doe2020Visualizing",
+        "Doe2020Design",
+        "Doe2020VisualizingSets",
+        "Doe2022SpatioTemporal"
+      ]
     }
   },
   "specialSections": {
