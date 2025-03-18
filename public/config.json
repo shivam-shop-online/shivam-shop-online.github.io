@@ -1,5 +1,5 @@
 {
-  "researcherName": "Test",
+  "researcherName": "John Doe",
   "institution": "{Institution Name}",
   "email": "{email@example.com}",
   "theme": "light",
@@ -29,10 +29,10 @@
   "bibtexPath": "/pubs.bib",
   "profilePhotoPath": "/profile-photo.png",
   "sectionsToShowInThisOrder": [
-    "About",
     "Education",
-    "WorkExperience",
+    "About",
     "Awards",
+    "WorkExperience",
     "FeaturedPublications",
     "Contact",
     "AllPublications",
