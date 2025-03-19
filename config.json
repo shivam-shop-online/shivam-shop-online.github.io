@@ -183,5 +183,6 @@
       "headerText": "[Docs]",
       "path": "/docs"
     }
-  }
+  },
+  "_filePath": "public/config.json"
 }
